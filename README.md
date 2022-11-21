@@ -10,7 +10,7 @@
 * Customize your settings inside *scripts/script_to_create_template.sh* file
 * run as root 
 ```bash
-./script_to_create_template.sh
+./scripts/script_to_create_template.sh
 ```
 * At the end of the process, you should have a new template created on your proxmox server
 * you can use this template to create a new VM based on it. ie: (replace with your own values) 
@@ -18,9 +18,17 @@
 qm clone <TEMPLATE_ID> <VM_ID> --name "myNewVM"
 ```
 
-## Step 2: 
-
-
-
-
-
+## Step 2: Deploy !
+* Init
+```bash
+cd k8s-cluster
+terraform init
+```
+* Plan
+```bash
+terraform plan
+```
+* Apply
+```bash
+terraform apply -auto-approve
+```
