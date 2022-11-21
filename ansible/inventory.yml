@@ -6,7 +6,7 @@ proxmoxs:
 
 k8s-nodes:
   children:
-    workers:
+    k8s-workers:
       hosts:
         worker1:
           ansible_host: 192.168.16.211
@@ -14,7 +14,7 @@ k8s-nodes:
         worker2:
           ansible_host: 192.168.16.212
           ansible_user: ubuntu
-    masters:
+    k8s-masters:
       hosts:
         master1:
           ansible_host: 192.168.16.201

@@ -33,3 +33,7 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# ansible join command 
+join_command.out
+*.out
